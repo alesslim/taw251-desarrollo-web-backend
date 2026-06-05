@@ -1,0 +1,42 @@
+.unauthorized-page {
+    min-height: 100vh;
+    background-color: #111827;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.unauthorized-card {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 16px;
+    padding: 35px;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.unauthorized-title {
+    color: #f97316;
+    font-size: 34px;
+    margin: 0 0 14px 0;
+}
+
+.unauthorized-text {
+    color: #d1d5db;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.unauthorized-button {
+    background-color: #f97316;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
