@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const api = axios.create({
-    baseURL: "'https://backend-taw251.onrender.com/api'",
+    baseURL: "https://backend-taw251.onrender.com/api",
 });
 
 api.interceptors.request.use((config) => {
