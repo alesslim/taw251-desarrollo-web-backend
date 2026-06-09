@@ -120,17 +120,14 @@ function DashboardPage() {
     <div className="dashboard-page">
       <div className="dashboard-header">
         <h1 className="dashboard-title">Panel principal</h1>
-
         <p className="dashboard-subtitle">
-          Resumen general del sistema Urban Style para la administración de
-          productos, categorías, usuarios, reportes y registros de acceso.
         </p>
       </div>
 
       {error && <div className="dashboard-alert-error">{error}</div>}
 
       {cargando ? (
-        <p className="dashboard-loading">Cargando información del sistema...</p>
+        <p className="dashboard-loading"></p>
       ) : (
         <>
           <div className="dashboard-cards">
@@ -157,14 +154,7 @@ function DashboardPage() {
 
           <div className="dashboard-content">
             <div className="dashboard-panel">
-              <h2 className="dashboard-panel-title">Resumen del sistema</h2>
-
-              <p className="dashboard-text">
-                Este sistema permite gestionar una tienda online de ropa
-                deportiva. El administrador puede registrar productos,
-                organizarlos por categorías, controlar usuarios, generar
-                reportes PDF y revisar los accesos al sistema.
-              </p>
+              <h2 className="dashboard-panel-title">Opciones: </h2>
 
               <div className="dashboard-actions">
                 <button
@@ -226,23 +216,6 @@ function DashboardPage() {
                   <span>Administradores</span>
                   <span className="dashboard-status-value">
                     {usuariosAdmin}
-                  </span>
-                </div>
-
-                <div className="dashboard-status-item">
-                  <span>Ingresos registrados</span>
-                  <span className="dashboard-status-value">{ingresos}</span>
-                </div>
-
-                <div className="dashboard-status-item">
-                  <span>Salidas registradas</span>
-                  <span className="dashboard-status-value">{salidas}</span>
-                </div>
-
-                <div className="dashboard-status-item">
-                  <span>Última actualización</span>
-                  <span className="dashboard-status-value">
-                    {obtenerFechaActual()}
                   </span>
                 </div>
               </div>
