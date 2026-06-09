@@ -86,10 +86,6 @@ function DashboardPage() {
     (producto) => producto.estado === false
   ).length;
 
-  const productosSinStock = productos.filter(
-    (producto) => producto.stock <= 0
-  ).length;
-
   const totalCategorias = categorias.length;
 
   const categoriasActivas = categorias.filter(
@@ -111,10 +107,6 @@ function DashboardPage() {
   const salidas = registros.filter(
     (registro) => registro.evento === "salida"
   ).length;
-
-  const obtenerFechaActual = () => {
-    return new Date().toLocaleString();
-  };
 
   return (
     <div className="dashboard-page">
@@ -154,7 +146,7 @@ function DashboardPage() {
 
           <div className="dashboard-content">
             <div className="dashboard-panel">
-              <h2 className="dashboard-panel-title">Opciones: </h2>
+              <h2 className="dashboard-panel-title">Opciones</h2>
 
               <div className="dashboard-actions">
                 <button
@@ -199,13 +191,6 @@ function DashboardPage() {
                 </div>
 
                 <div className="dashboard-status-item">
-                  <span>Productos sin stock</span>
-                  <span className="dashboard-status-value">
-                    {productosSinStock}
-                  </span>
-                </div>
-
-                <div className="dashboard-status-item">
                   <span>Total categorías</span>
                   <span className="dashboard-status-value">
                     {totalCategorias}
@@ -217,6 +202,16 @@ function DashboardPage() {
                   <span className="dashboard-status-value">
                     {usuariosAdmin}
                   </span>
+                </div>
+
+                <div className="dashboard-status-item">
+                  <span>Ingresos registrados</span>
+                  <span className="dashboard-status-value">{ingresos}</span>
+                </div>
+
+                <div className="dashboard-status-item">
+                  <span>Salidas registradas</span>
+                  <span className="dashboard-status-value">{salidas}</span>
                 </div>
               </div>
             </div>
